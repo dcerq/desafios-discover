@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root {
+  --body-bg-color: #FAF7FD;
+  --purple: #BB99DD;
+  --white-ligth: #FFFFF7;
+}
+
+body, html{
+  font-family: 'Poppins' sans-serif;
+  background: var(--body-bg-color);
+}
+
+/* width 100vw sempre vai pegar 100% da largura do dipositivos que ta usando. height 100vh vai sempre pegar 100 % da altura do diposito utilizado.*/
+
+/* Flex pra deixar o elemento flexivel dentro do container, aling-items deixar os itens tudo alinhado um do lado do outro e mesma altura e o justify-content colocar todo conteudo no centro */
+.container{
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Flex-direction: colum, colocar os elementos um abaixo do outro */
+.container .tree-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-container .avatar{
+  width: 213px;
+  height: 213px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--purple);
+  border-radius: 50%;
+}
+
+.tree-container .avatar img{
+  width: 200px;
+  height: 200px;
+
+  border-radius: 50%;
+}
+
+.tree-container .insta-user{
+  margin-top: 15px;
+
+  color: var(--purple);
+
+}
+/* Margin-top da uma afastamendo da margem da parte de cima. Flex-direction: colum, colocar os elementos um abaixo do outro */
+
+.tree-container .links-container {
+  margin-top: 17px;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.tree-container  .link{
+  margin-top: 16px;
+  width: 325px;
+
+  border: 2px solid var(--purple);
+  border-radius: 4px;
+
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+
+ /*12pix em cima e embaixo e 0 na laterais */
+  padding: 12px 0;
+
+  transition: ease 0.3s;
+}
+
+/*houver quando o mouse passar por cima do elemento, ele vai mudar de cor*/
+.links-container .link:hover{
+  background: var(--purple);
+  color: var(--white-ligth);
+}
+
+.tree-container .socials-container{
+  margin-top: 68px;
+
+  /*Grid vai deixar tudo em coluna, 1fr repete 5 vezes uma fração, gap espaço que da nos itens*/
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 29px;
+
+}
